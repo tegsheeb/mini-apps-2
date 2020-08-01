@@ -20,6 +20,7 @@ class Pins extends Component {
   render() {
     return (
       <div>
+        <button type="button" value="0" onClick={this.handleSelect}> 0 </button>
         <button type="button" value="1" onClick={this.handleSelect}> 1 </button>
         <button type="button" value="2" onClick={this.handleSelect}> 2 </button>
         <button type="button" value="3" onClick={this.handleSelect}> 3 </button>
