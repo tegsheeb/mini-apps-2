@@ -7,6 +7,8 @@ class App extends Component {
     super();
     this.state = {
       rounds: [],
+      cumulativeScores: [],
+      totalScore: null,
     };
     this.handleSelect = this.handleSelect.bind(this);
   }
@@ -20,12 +22,12 @@ class App extends Component {
   }
 
   render() {
-    const { rounds } = this.state;
+    const { rounds, cumulativeScores, totalScore } = this.state;
     return (
       <div>
+        <ScoreBoard rounds={rounds} cumulativeScores={cumulativeScores} totalScore={totalScore} />
         <h3> Select number of pins to hit </h3>
         <Pins handleSelect={this.handleSelect} />
-        <ScoreBoard rounds={rounds} />
       </div>
     );
   }
